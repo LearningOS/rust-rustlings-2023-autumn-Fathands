@@ -43,10 +43,7 @@ mod my_module {
                     output.push(string.trim().to_string());
                 },
                 Command::Append(n) => {
-                    let mut s = "".to_string();
-                    for i in 1..=*n {
-                        s += "bar";
-                    };
+                    let mut s = "bar".repeat(*n);
                     let res = string.to_owned() + &s;
                     output.push(res);
                 }
